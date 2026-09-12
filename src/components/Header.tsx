@@ -3,35 +3,36 @@ import Link from "next/link";
 const nav = [
   { href: "#work", label: "Work" },
   { href: "#services", label: "Services" },
-  { href: "#about", label: "About" },
-  { href: "#contact", label: "Contact" },
+  { href: "#studio", label: "Studio" },
 ];
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border/80 bg-black/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-6xl items-center gap-3 px-6 sm:h-20 sm:gap-6 sm:px-8">
-        <Link href="/" className="flex shrink-0 items-center gap-3 group">
+    <header className="sticky top-0 z-50 border-b border-border-subtle/80 bg-[#101014]/80 backdrop-blur-xl">
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6 sm:h-16 sm:px-8">
+        <Link href="/" className="flex items-center gap-2.5 group">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/logo.svg"
             alt="Perry"
-            width={36}
-            height={36}
-            className="h-9 w-9 transition-transform group-hover:scale-105"
+            width={28}
+            height={28}
+            className="h-7 w-7 transition-transform group-hover:scale-105"
           />
-          <span className="text-lg font-semibold tracking-tight">Perry</span>
+          <span className="text-[15px] font-medium tracking-tight text-white">
+            Perry
+          </span>
         </Link>
 
         <nav
-          className="flex min-w-0 flex-1 items-center justify-end gap-5 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] md:justify-center md:gap-8 [&::-webkit-scrollbar]:hidden"
+          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 md:flex"
           aria-label="Primary"
         >
           {nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="shrink-0 text-sm text-muted transition-colors hover:text-white"
+              className="rounded-full px-3.5 py-1.5 text-[13px] text-muted-soft transition-colors hover:bg-white/5 hover:text-white"
             >
               {item.label}
             </a>
@@ -40,7 +41,7 @@ export default function Header() {
 
         <a
           href="#contact"
-          className="shrink-0 rounded-full bg-perry px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-perry-hover sm:px-5"
+          className="rounded-full bg-white px-4 py-1.5 text-[13px] font-medium text-[#101014] transition-opacity hover:opacity-90"
         >
           Start a project
         </a>
