@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "Perry — Websites, Games & Digital Work",
   description:
     "Perry designs and builds websites, games, and digital experiences with sharp craft and bold energy.",
+  themeColor: "#000000",
   icons: {
     icon: "/favicon.svg",
   },

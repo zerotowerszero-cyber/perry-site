@@ -63,7 +63,7 @@ export default function Work() {
                   <p className="max-w-2xl text-muted">{project.blurb}</p>
                 </div>
                 <span className="shrink-0 text-sm font-medium text-perry opacity-80 transition-opacity group-hover:opacity-100">
-                  {project.href.startsWith("http") ? "Visit →" : "Talk about it →"}
+                  {project.href.startsWith("http") ? "Visit site" : "Get in touch"}
                 </span>
               </a>
             </li>

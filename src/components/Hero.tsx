@@ -10,7 +10,7 @@ export default function Hero() {
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-perry">
             Digital studio
           </p>
-          <h1 className="max-w-xl text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-xl text-5xl font-semibold leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl">
             Websites, games, and digital work that feel alive.
           </h1>
           <p className="max-w-lg text-lg leading-relaxed text-muted sm:text-xl">

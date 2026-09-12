@@ -35,3 +35,10 @@ body {
   background: color-mix(in srgb, var(--perry-red) 40%, transparent);
   color: #fff;
 }
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--perry-red);
+  outline-offset: 3px;
+}
