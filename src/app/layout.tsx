@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
 const inter = Inter({
@@ -13,7 +15,6 @@ export const metadata: Metadata = {
   title: "Perry — Websites, Games & Digital Work",
   description:
     "Perry designs and builds websites, games, and digital experiences with sharp craft and bold energy.",
-  themeColor: "#000000",
   icons: {
     icon: "/favicon.svg",
   },
@@ -32,7 +33,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${GeistMono.variable} ${inter.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
         {children}
       </body>
