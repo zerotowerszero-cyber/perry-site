@@ -29,7 +29,7 @@ export default function Contact() {
               href="https://eas.cx"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-button-light px-6 text-[14px] font-medium text-white transition-colors hover:bg-[#e0e0e0]"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-button-light px-6 text-[14px] font-medium text-foreground transition-colors hover:bg-[#e0e0e0]"
             >
               Visit eas.cx
             </a>
