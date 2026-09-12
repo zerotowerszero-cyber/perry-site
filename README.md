@@ -4,11 +4,32 @@ Marketing site for **Perry** — a digital studio that makes websites, games, an
 
 Built with Next.js (App Router), TypeScript, and Tailwind CSS. Designed for deployment on Vercel.
 
-## Brand
+## Brand & visual system
 
-- Primary accent: `#FF263C`
-- Background: black (`#000000`)
-- Logo: red circle with slanted eye cutouts (`public/logo.png`, `public/favicon.svg`)
+Light theme modeled after a clean product marketing layout (not dark):
+
+| Token | Value |
+| --- | --- |
+| Background | `#FFFFFF` |
+| Primary text / buttons | `#0A0A0A` |
+| Secondary text | `#7D8187` |
+| Cards / panels | `#F9F8F6` |
+| Light buttons | `#EBEBEB` |
+| Borders | `#D5D9E2` |
+| Cyan accent | `#0093A3` / soft `#F2FEFF` |
+| Brand mark | `#FF263C` eyes logo (`public/logo.svg`, `public/favicon.svg`) |
+
+## Typography
+
+x.ai/bot uses **Universal Sans** and **Universal Sans Display** from Family Type (commercial).
+
+- CSS variables: `--font-sans` and `--font-display` in `src/app/globals.css`
+- `@font-face` stubs: `public/fonts/universal-sans.css`
+- **Do not** scrape or hotlink `.woff2` files from x.ai
+- Drop licensed files into `public/fonts/` — see `public/fonts/README.md` for filenames
+- Until those files are present, **Inter** (`next/font`) is the temporary fallback
+
+Headings use the `.font-display` utility (Universal Sans Display → Inter).
 
 ## Getting started
 
@@ -45,14 +66,14 @@ npx vercel
 
 ```
 src/
-  app/           # App Router layout + home page
-  components/    # Header, Hero, Work, Services, About, Contact, Footer
+  app/           # App Router layout + home page + globals
+  components/    # Header, Hero, Features, Services, Work, Packages, Contact, Footer
 public/
-  logo.png       # Brand mark
-  favicon.svg    # Favicon
-  og-logo.png    # Open Graph image
+  logo.svg       # Brand mark (red #FF263C)
+  favicon.svg
+  fonts/         # Universal Sans stubs + drop licensed .woff2 here
 ```
 
 ## Featured work
 
-- [eas.cx](https://eas.cx) — live project linked from the Work and Contact sections.
+- [eas.cx](https://eas.cx) — live project linked from Work and Contact.

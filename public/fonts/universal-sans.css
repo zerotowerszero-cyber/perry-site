@@ -1,0 +1,125 @@
+/*
+  Universal Sans / Universal Sans Display (Family Type)
+  ------------------------------------------------------
+  Commercial fonts used on x.ai/bot. Do NOT hotlink or scrape
+  their woff2 files. Drop licensed .woff2 files into this folder
+  using the filenames below, then the site will pick them up.
+
+  Expected files (place next to this CSS):
+    UniversalSans-Text-400.woff2
+    UniversalSans-Text-400Italic.woff2
+    UniversalSans-Text-550.woff2
+    UniversalSans-Text-550Italic.woff2
+    UniversalSans-Display-400.woff2
+    UniversalSans-Display-400Italic.woff2
+    UniversalSans-Display-550.woff2
+    UniversalSans-Display-550Italic.woff2
+
+  Until those files exist, browsers fall back to Inter / system UI
+  via --font-sans and --font-display in globals.css.
+*/
+
+@font-face {
+  font-family: "Universal Sans";
+  src: url("./UniversalSans-Text-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Universal Sans";
+  src: url("./UniversalSans-Text-400Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Universal Sans";
+  src: url("./UniversalSans-Text-550.woff2") format("woff2");
+  font-weight: 550;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Universal Sans";
+  src: url("./UniversalSans-Text-550Italic.woff2") format("woff2");
+  font-weight: 550;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Map common weights so CSS font-medium / font-semibold still resolve */
+@font-face {
+  font-family: "Universal Sans";
+  src: url("./UniversalSans-Text-550.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Universal Sans";
+  src: url("./UniversalSans-Text-550.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Universal Sans Display";
+  src: url("./UniversalSans-Display-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Universal Sans Display";
+  src: url("./UniversalSans-Display-400Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Universal Sans Display";
+  src: url("./UniversalSans-Display-550.woff2") format("woff2");
+  font-weight: 550;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Universal Sans Display";
+  src: url("./UniversalSans-Display-550Italic.woff2") format("woff2");
+  font-weight: 550;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Universal Sans Display";
+  src: url("./UniversalSans-Display-550.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Universal Sans Display";
+  src: url("./UniversalSans-Display-550.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Universal Sans Display";
+  src: url("./UniversalSans-Display-550.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
