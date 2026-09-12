@@ -1,32 +1,51 @@
 @import "tailwindcss";
 
 :root {
-  --background: #101014;
-  --foreground: #ffffff;
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --muted: #7d8187;
+  --muted-soft: #9a9ea4;
+  --card: #f9f8f6;
+  --card-elevated: #ffffff;
+  --button-light: #ebebeb;
+  --border: #d5d9e2;
+  --border-subtle: #e8eaef;
+  --cyan: #0093a3;
+  --cyan-soft: #f2feff;
   --perry-red: #ff263c;
-  --perry-red-hover: #ff4d5f;
-  --violet: #885cf5;
-  --muted: #8b8b93;
-  --muted-soft: #a9a9b2;
-  --card: #16161a;
-  --card-elevated: #1c1c22;
-  --border: #2a2a32;
-  --border-subtle: #222228;
+  --perry-red-hover: #e01f33;
+  --orange: #f5a623;
+
+  /*
+    x.ai/bot uses Universal Sans + Universal Sans Display (Family Type).
+    Drop licensed .woff2 into public/fonts/ (see public/fonts/README.md).
+    Until then, Inter (next/font --font-inter) is the temporary fallback.
+  */
+  --font-sans: "Universal Sans", var(--font-inter), ui-sans-serif, system-ui,
+    sans-serif;
+  --font-display: "Universal Sans Display", "Universal Sans", var(--font-inter),
+    ui-sans-serif, system-ui, sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-perry: var(--perry-red);
-  --color-perry-hover: var(--perry-red-hover);
-  --color-violet: var(--violet);
   --color-muted: var(--muted);
   --color-muted-soft: var(--muted-soft);
   --color-card: var(--card);
   --color-card-elevated: var(--card-elevated);
+  --color-button-light: var(--button-light);
   --color-border: var(--border);
   --color-border-subtle: var(--border-subtle);
-  --font-sans: var(--font-geist-sans), var(--font-inter), system-ui, sans-serif;
+  --color-cyan: var(--cyan);
+  --color-cyan-soft: var(--cyan-soft);
+  --color-perry: var(--perry-red);
+  --color-perry-hover: var(--perry-red-hover);
+  --color-orange: var(--orange);
+  --font-sans: "Universal Sans", var(--font-inter), ui-sans-serif, system-ui,
+    sans-serif;
+  --font-display: "Universal Sans Display", "Universal Sans", var(--font-inter),
+    ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
@@ -37,10 +56,14 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--perry-red) 40%, transparent);
-  color: #fff;
+  background: color-mix(in srgb, var(--perry-red) 28%, transparent);
+  color: var(--foreground);
 }
