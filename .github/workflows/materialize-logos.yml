@@ -1,0 +1,39 @@
+name: Materialize logos
+on:
+  push:
+    paths:
+      - "public/*.png.b64"
+      - ".github/workflows/materialize-logos.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode PNG sidecars
+        run: |
+          python3 - <<'PY'
+          import base64, pathlib
+          root = pathlib.Path("public")
+          written = []
+          for p in sorted(root.glob("*.png.b64")):
+              out = root / (p.name[:-4])  # logo.png.b64 -> logo.png
+              out.write_bytes(base64.b64decode(p.read_text().strip().encode("ascii")))
+              written.append(str(out))
+              print("wrote", out, out.stat().st_size)
+          if not written:
+              raise SystemExit("no *.png.b64 files found")
+          PY
+      - name: Commit PNGs if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/logo.png public/og-logo.png
+          if git diff --cached --quiet; then
+            echo "No PNG changes"
+            exit 0
+          fi
+          git commit -m "Add Perry marketing site"
+          git push
