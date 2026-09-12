@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const nav = [
@@ -13,13 +12,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-border/80 bg-black/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 sm:h-20 sm:px-8">
         <Link href="/" className="flex items-center gap-3 group">
-          <Image
-            src="/logo.png"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.svg"
             alt="Perry"
             width={36}
             height={36}
-            className="h-9 w-9 rounded-full transition-transform group-hover:scale-105"
-            priority
+            className="h-9 w-9 transition-transform group-hover:scale-105"
           />
           <span className="text-lg font-semibold tracking-tight">Perry</span>
         </Link>

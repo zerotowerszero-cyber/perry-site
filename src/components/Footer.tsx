@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -6,12 +5,13 @@ export default function Footer() {
     <footer className="mt-auto">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 sm:flex-row sm:items-center sm:justify-between sm:px-8">
         <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/logo.png"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.svg"
             alt="Perry"
             width={28}
             height={28}
-            className="h-7 w-7 rounded-full"
+            className="h-7 w-7"
           />
           <span className="font-semibold tracking-tight">Perry</span>
         </Link>

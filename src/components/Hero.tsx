@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-border">
@@ -40,13 +38,13 @@ export default function Hero() {
             aria-hidden
             className="absolute h-64 w-64 rounded-full bg-perry/20 blur-3xl sm:h-80 sm:w-80"
           />
-          <Image
-            src="/logo.png"
-            alt="Perry logo — red circle with slanted eye cutouts"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.svg"
+            alt="Perry logo — red mark with slanted eye cutouts"
             width={420}
             height={420}
             className="relative h-auto w-full max-w-[320px] drop-shadow-[0_0_60px_rgba(255,38,60,0.35)] sm:max-w-[380px]"
-            priority
           />
         </div>
       </div>
